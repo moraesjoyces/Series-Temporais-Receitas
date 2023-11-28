@@ -1,0 +1,38 @@
+# Entrega: Coleta de dados, modelagem e conclusões.
+
+## Coleta de Dados
+
+A coleta de dados é o ponto de partida fundamental para a análise de séries temporais da receita municipal de Osasco. Neste projeto, os dados são obtidos de fontes públicas, mais especificamente do [link](https://transparencia.tce.sp.gov.br/municipio/osasco) disponibilizado pelo Tribunal de Contas do Estado de São Paulo.
+
+O conjunto de dados original estava dividido por ano, o que poderia dificultar a análise temporal. Para facilitar o processo, foi consolidado um arquivo CSV único contendo informações desde 2014 até o presente ano. Além disso, foram acrescentadas colunas relevantes, como Espécie de Receita, Categoria Econômica e Fonte de Recursos, para enriquecer a análise.
+
+Inconsistências nos dados originais, como a ausência de marcadores decimais em determinados anos, foram corrigidas previamente para assegurar precisão nos cálculos.
+
+## Modelagem
+
+O código em Python utiliza diversas bibliotecas, incluindo Pandas para manipulação e análise de dados, Matplotlib e Seaborn para visualização, e Statsmodels para decomposição de séries temporais.
+
+A modelagem dos dados segue uma abordagem passo a passo:
+
+1. **Exploração Inicial:**
+   - Visualização da estrutura do DataFrame.
+   - Análise de informações estatísticas para compreender a natureza dos dados.
+
+2. **Manipulação e Indexação:**
+   - Concatenação das colunas de mês e ano para permitir uma fácil indexação temporal.
+   - Conversão da coluna resultante para formato de data.
+
+3. **Visualização Temporal:**
+   - Criação de uma visualização simples da arrecadação mensal para compreensão geral.
+
+4. **Análise dos Componentes Principais:**
+   - Decomposição das séries temporais em tendência, sazonalidade e resíduos.
+   - Análise específica por fonte de recurso e espécie de receita para identificar padrões.
+
+## Conclusões
+
+A análise dos componentes principais proporciona insights valiosos sobre a arrecadação municipal ao longo do tempo. Ao examinar tendências, sazonalidades e resíduos, podemos entender melhor os padrões subjacentes.
+
+Por exemplo, a análise por fonte de recurso revela como diferentes categorias contribuem para a arrecadação total, identificando períodos de crescimento consistente, flutuações sazonais e eventos atípicos. Da mesma forma, a análise por espécie de receita destaca as nuances específicas de cada tipo de arrecadação.
+
+Essas conclusões não apenas oferecem uma visão retrospectiva valiosa, mas também servem como base para previsões futuras. Ao compreender os padrões históricos, gestores municipais podem tomar decisões mais informadas e estratégicas para otimizar a gestão financeira.
